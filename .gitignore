@@ -1,0 +1,21 @@
+# Dependencies
+**/node_modules/
+
+# Local environment configuration
+.env*
+!.env.example
+
+# Build output
+**/dist/
+**/build/
+**/coverage/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Editor and operating system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

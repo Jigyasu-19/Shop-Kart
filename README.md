@@ -130,6 +130,10 @@ customer's authentication cookie.
   your hosting provider.
 - Use Razorpay Test Mode credentials for local testing. Do not put the Razorpay
   secret in frontend configuration.
+- In production, the authentication cookie uses `SameSite=None; Secure` so the
+  separately hosted frontend and API can share the login session. Some browsers
+  block third-party cookies regardless; hosting both under the same site with
+  a custom domain is more reliable.
 - The product creation endpoint is not protected by an admin authentication
   route in this project; do not expose it as a public production admin feature
   without adding appropriate authorization.
